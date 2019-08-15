@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stra_date: 2019-08-15 15:00:11
+  duration: 1
+  title: MyString
+  descriptin: MyText
+  price: 1
+  location: MyString
+
+two:
+  stra_date: 2019-08-15 15:00:11
+  duration: 1
+  title: MyString
+  descriptin: MyText
+  price: 1
+  location: MyString
