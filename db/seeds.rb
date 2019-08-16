@@ -12,7 +12,7 @@ require 'faker'
 
 # last_names = ['Depay', 'Dembélé', 'Traoré', 'Aouar', 'Tousart', 'Mendes', 'Koné', 'Denayer', 'Andersen', 'Dubois']
 
-# 10.times do |i|
+# 2.times do |i|
 #   first_name = first_names[i]
 #   last_name = last_names[i]
 #   description = "#{first_name} #{last_name} tu es beau ou belle"
@@ -20,7 +20,7 @@ require 'faker'
 #   User.create(first_name: first_name, last_name: last_name, description: description, email: email)
 # end
 
-12.times do |i|
+2.times do |i|
   event = Event.new
   event.start_date = DateTime.now + rand(1..100)
   event.duration = rand(1..50)*5

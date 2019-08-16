@@ -389,3 +389,376 @@ Migrating to CreateEvents (20190815120011)
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
   [1m[36mAttendance Load (1.0ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances"[0m
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (67.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mEvent Load (16.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (59.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "féfé@yopmail.com"], ["first_name", "Féfé"], ["created_at", "2019-08-16 06:15:05.089700"], ["updated_at", "2019-08-16 06:15:05.089700"]]
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (11.1ms)
+UserMailer#welcome_email: processed outbound mail in 45.6ms
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "tovo@yopmail.com"], ["description", "description"], ["first_name", "Randria"], ["last_name", "tovo"], ["created_at", "2019-08-16 06:23:34.976296"], ["updated_at", "2019-08-16 06:23:34.976296"]]
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (11.0ms)
+UserMailer#welcome_email: processed outbound mail in 22.1ms
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (52.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "depay@yopmail.com"], ["description", "Nambinina Depay tu es beau ou belle"], ["first_name", "Nambinina"], ["last_name", "Depay"], ["created_at", "2019-08-16 06:28:37.766335"], ["updated_at", "2019-08-16 06:28:37.766335"]]
+  ↳ db/seeds.rb:20
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (6.6ms)
+UserMailer#welcome_email: processed outbound mail in 14.2ms
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "depay@yopmail.com"], ["description", "Nambinina Depay tu es beau ou belle"], ["first_name", "Nambinina"], ["last_name", "Depay"], ["created_at", "2019-08-16 06:38:00.802831"], ["updated_at", "2019-08-16 06:38:00.802831"]]
+  ↳ db/seeds.rb:20
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (6.6ms)
+UserMailer#welcome_email: processed outbound mail in 14.2ms
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "depay@yopmail.com"], ["description", "Nambinina Depay tu es beau ou belle"], ["first_name", "Nambinina"], ["last_name", "Depay"], ["created_at", "2019-08-16 06:39:50.377145"], ["updated_at", "2019-08-16 06:39:50.377145"]]
+  ↳ db/seeds.rb:20
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.8ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (6.2ms)
+UserMailer#welcome_email: processed outbound mail in 15.5ms
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "depay@yopmail.com"], ["description", "Nambinina Depay tu es beau ou belle"], ["first_name", "Nambinina"], ["last_name", "Depay"], ["created_at", "2019-08-16 06:40:53.485478"], ["updated_at", "2019-08-16 06:40:53.485478"]]
+  ↳ db/seeds.rb:20
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.8ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+UserMailer#welcome_email: processed outbound mail in 214.6ms
+Sent mail to depay@yopmail.com (42.7ms)
+Date: Fri, 16 Aug 2019 09:40:53 +0300
+From: no-reply@monsite.fr
+To: depay@yopmail.com
+Message-ID: <5d564ff5adcbf_17bc2b093d5065c418727@lenovoa14.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d564ff5ac57c_17bc2b093d5065c4186a8";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d564ff5ac57c_17bc2b093d5065c4186a8
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgTmFtYmluaW5hIGV0IGJpZW52ZW51ZSBjaGV6IG5vdXMgIQ0KPT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PQ0KIA0KVHUgdCdlcyBpbnNjcml0IHN1ciBtb25zaXRlLmZy
+IGVuIHV0aWxpc2FudCBsJ2UtbWFpbCBzdWl2YW50IDogZGVwYXlAeW9wbWFp
+bC5jb20uDQogDQpQb3VyIGFjY8OpZGVyIMOgIHRvbiBlc3BhY2UgY2xpZW50
+LCBjb25uZWN0ZS10b2kgdmlhIDogaHR0cDovL21vbnNpdGUuZnIvbG9naW4u
+DQogDQrDgCB0csOocyB2aXRlIHN1ciBtb25zaXRlLmZyICENCg==
+
+----==_mimepart_5d564ff5ac57c_17bc2b093d5065c4186a8
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Nambinina et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : depa=
+y@yopmail.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5d564ff5ac57c_17bc2b093d5065c4186a8--
+
+  [1m[35m (404.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "dembélé@yopmail.com"], ["description", "Iantsa Dembélé tu es beau ou belle"], ["first_name", "Iantsa"], ["last_name", "Dembélé"], ["created_at", "2019-08-16 06:40:54.161975"], ["updated_at", "2019-08-16 06:40:54.161975"]]
+  ↳ db/seeds.rb:20
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.1ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.0ms)
+UserMailer#welcome_email: processed outbound mail in 19.2ms
+Sent mail to dembélé@yopmail.com (48.5ms)
+Date: Fri, 16 Aug 2019 09:40:54 +0300
+From: no-reply@monsite.fr
+To: =?UTF-8?B?ZGVtYsOpbMOp?=@yopmail.com
+Message-ID: <5d564ff62df00_17bc2b093d5065c41899b@lenovoa14.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d564ff62b6b8_17bc2b093d5065c41888e";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d564ff62b6b8_17bc2b093d5065c41888e
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgSWFudHNhIGV0IGJpZW52ZW51ZSBjaGV6IG5vdXMgIQ0KPT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PQ0KIA0KVHUgdCdlcyBpbnNjcml0IHN1ciBtb25zaXRlLmZyIGVu
+IHV0aWxpc2FudCBsJ2UtbWFpbCBzdWl2YW50IDogZGVtYsOpbMOpQHlvcG1h
+aWwuY29tLg0KIA0KUG91ciBhY2PDqWRlciDDoCB0b24gZXNwYWNlIGNsaWVu
+dCwgY29ubmVjdGUtdG9pIHZpYSA6IGh0dHA6Ly9tb25zaXRlLmZyL2xvZ2lu
+Lg0KIA0Kw4AgdHLDqHMgdml0ZSBzdXIgbW9uc2l0ZS5mciAhDQo=
+
+----==_mimepart_5d564ff62b6b8_17bc2b093d5065c41888e
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Iantsa et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : demb=
+=C3=A9l=C3=A9@yopmail.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5d564ff62b6b8_17bc2b093d5065c41888e--
+
+  [1m[35m (44.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mEvent Create (24.3ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2019-09-30 07:28:22.571639"], ["duration", 15], ["title", "Hammock yolo drinking portland."], ["description", "Fashion axe keffiyeh tumblr neutra mustache paleo phlogiston. Carry heirloom cold-pressed polaroid paleo synth. Butcher tumblr kale chips. Kickstarter offal deep v portland."], ["price", 310], ["location", "Cathiechester"], ["admin_id", 5], ["created_at", "2019-08-16 07:28:22.958386"], ["updated_at", "2019-08-16 07:28:22.958386"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (46.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2019-11-05 07:28:23.031793"], ["duration", 185], ["title", "Pour-over green juice chicharrones poutine roof ramps yuccie typewriter scenester."], ["description", "Leggings five dollar toast disrupt marfa plaid. Brooklyn vinegar narwhal bitters. Carry lo-fi you probably haven't heard of them put a bird on it try-hard asymmetrical."], ["price", 483], ["location", "Harveyfort"], ["admin_id", 1], ["created_at", "2019-08-16 07:28:23.035458"], ["updated_at", "2019-08-16 07:28:23.035458"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (16.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mEvent Create (0.8ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2019-10-21 07:32:39.613529"], ["duration", 215], ["title", "Pickled kale chips 3 wolf moon keytar fanny pack intelligentsia kogi you probably haven't heard of them."], ["description", "Selfies gentrify squid taxidermy. Neutra everyday slow-carb chia art party. Ethical aesthetic cleanse. Microdosing church-key tousled fingerstache kinfolk."], ["price", 555], ["location", "South Xiomara"], ["admin_id", 3], ["created_at", "2019-08-16 07:32:39.709473"], ["updated_at", "2019-08-16 07:32:39.709473"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2019-10-07 07:32:39.729003"], ["duration", 165], ["title", "Phlogiston bitters schlitz blog iphone hoodie asymmetrical."], ["description", "Leggings franzen helvetica flexitarian. Vhs helvetica cleanse authentic gluten-free fanny pack hammock. Hashtag kogi aesthetic vinegar narwhal. Mixtape chia bicycle rights flannel banjo."], ["price", 88], ["location", "Mitchellview"], ["admin_id", 2], ["created_at", "2019-08-16 07:32:39.731987"], ["updated_at", "2019-08-16 07:32:39.731987"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2019-09-05 07:52:52.551279"], ["duration", 30], ["title", "Narwhal thundercats you probably haven't heard of them sriracha wolf humblebrag cray mixtape microdosing."], ["description", "Ugh readymade williamsburg kombucha sustainable. Pickled ethical mustache phlogiston flexitarian leggings. Lumbersexual neutra jean shorts vhs helvetica dreamcatcher typewriter. Swag brooklyn cray cliche."], ["price", 359], ["location", "Zulaufville"], ["admin_id", 6], ["created_at", "2019-08-16 07:52:52.684951"], ["updated_at", "2019-08-16 07:52:52.684951"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (22.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2019-10-30 07:52:52.710074"], ["duration", 40], ["title", "Taxidermy squid fingerstache readymade williamsburg selvage twee cold-pressed."], ["description", "Banjo intelligentsia fashion axe poutine cliche vhs. Pork belly carry actually crucifix sustainable swag distillery narwhal. Thundercats wolf offal organic. Godard photo booth brooklyn occupy kale chips beard."], ["price", 611], ["location", "Feeneyport"], ["admin_id", 2], ["created_at", "2019-08-16 07:52:52.713095"], ["updated_at", "2019-08-16 07:52:52.713095"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (16.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mEvent Create (0.7ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2019-11-07 07:55:59.586008"], ["duration", 55], ["title", "Heirloom cold-pressed vice pug bitters raw denim banjo."], ["description", "Selvage thundercats kombucha deep v tote bag. Vice selfies fingerstache biodiesel letterpress whatever chambray."], ["price", 449], ["location", "D'Amoreside"], ["admin_id", 1], ["created_at", "2019-08-16 07:55:59.688549"], ["updated_at", "2019-08-16 07:55:59.688549"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (16.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2019-11-02 07:55:59.706908"], ["duration", 35], ["title", "Meggings banjo street green juice vinegar church-key squid kitsch."], ["description", "Brunch echo ethical wes anderson farm-to-table. Whatever letterpress chicharrones tote bag."], ["price", 288], ["location", "West Tyrellberg"], ["admin_id", 7], ["created_at", "2019-08-16 07:55:59.709947"], ["updated_at", "2019-08-16 07:55:59.709947"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (55.8ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "participant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 20], ["participant_id", 17], ["created_at", "2019-08-16 08:12:22.640704"], ["updated_at", "2019-08-16 08:12:22.640704"]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.7ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "participant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 20], ["participant_id", 17], ["created_at", "2019-08-16 08:15:12.775885"], ["updated_at", "2019-08-16 08:15:12.775885"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering attendance_mailer/confirmation_email.html.erb within layouts/mailer
+  Rendered attendance_mailer/confirmation_email.html.erb within layouts/mailer (1.0ms)
+  Rendering attendance_mailer/confirmation_email.text.erb within layouts/mailer
+  Rendered attendance_mailer/confirmation_email.text.erb within layouts/mailer (0.3ms)
+AttendanceMailer#confirmation_email: processed outbound mail in 204.2ms
+Sent mail to koné@yopmail.com (37.7ms)
+Date: Fri, 16 Aug 2019 11:15:13 +0300
+From: no-reply@monsite.fr
+To: =?UTF-8?B?a29uw6k=?=@yopmail.com
+Message-ID: <5d5666114544_21d42ab6bdd5c5c06307a@lenovoa14.mail>
+Subject: Votre participation est bien prise en compte !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d5666113249_21d42ab6bdd5c5c06297d";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d5666113249_21d42ab6bdd5c5c06297d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+DQpTYWx1dCBSYWpvICENCj09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCg0KTm91cyB0J2Vudm95
+b25zIGNlIG1haWwgcG91ciB0ZSBjb25maXJtZXIgdG9uIGluc2NyaXB0aW9u
+IMOgIGwnw6l2w6luZW1lbnQgOiAuDQoNCk5vdXMgZXNww6lyb25zIHF1ZSB0
+dSBwcm9maXRlcmFzIGJpZW4gZGUgY2V0IMOpdsOpbmVtZW50ICENCg0Kw4Ag
+dHLDqHMgdml0ZSBzdXIgZXZlbnRicml0ZW5hbWJpbmluYS5oZXJva3VhcHAu
+Y29tICENCg==
+
+----==_mimepart_5d5666113249_21d42ab6bdd5c5c06297d
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html lang=3D"en" dir=3D"ltr">=0D
+  <head>=0D
+    <meta charset=3D"utf-8">=0D
+    <title></title>=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Rajo !</h1>=0D
+=0D
+    <p>=0D
+      Nous t'envoyons ce mail pour te confirmer ton inscription =C3=A0 l'=
+=C3=A9v=C3=A9nement : =0D
+    </p>=0D
+    <p>=0D
+      Nous esp=C3=A9rons que tu profiteras bien de cet =C3=A9v=C3=A9nemen=
+t !=0D
+    </p>=0D
+    <p>=0D
+      =C3=80 tr=C3=A8s vite sur eventbritenambinina.herokuapp.com !=0D
+    </p>=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5d5666113249_21d42ab6bdd5c5c06297d--
+
+  [1m[35m (45.2ms)[0m  [1m[35mCOMMIT[0m
