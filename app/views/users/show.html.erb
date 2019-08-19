@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+<body>
+    <div class="container mt-4">
+      <h1 class='text-center'>User Profile</h1>
+      <br />
+      <div class="card mb-3 border-primary border-left-0">
+      <div class="row no-gutters">
+      <div class="col-2 col-lg-1 m-auto text-center">
+      </div>
+    <div class="col-10 col-lg-11">
+        <div class="card-body">
+          <p class="card-text"><strong>First Name : </strong><%= @user.first_name %></p>
+          <p class="card-text"><strong>Last Name : </strong><%= @user.last_name %></p>
+          <p class="card-text"><strong>Description : </strong><%= @user.description %></p>
+          <p class="card-text"><strong>Email : </strong><%= @user.email %></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

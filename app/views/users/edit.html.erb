@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row text-center">
+    <h1>Modifier ses informations</h1>
+  </div>
+  <%= simple_form_for @user, method: :patch do |f| %>
+    <!-- First and Last Name -->
+    <div class="row form-group">
+      <div class="col-md-6">
+        <%= f.input :first_name, label: 'First Name', class: 'form-control' %>
+      </div>
+      <div class="col-md-6">
+        <%= f.input :last_name, label: 'Last Name', class: 'form-control' %>
+      </div>
+    </div>
+    <!-- Descripton -->
+    <div class="row form-group">
+      <div class="col">
+        <%= f.input :description, placeholder: 'This site is incroyable !', class: 'form-control' %>
+      </div>
+    </div>
+    <%= f.button :submit, class: 'btn btn-primary' %>
+    <!--  -->
+  <% end %>
+</div>
