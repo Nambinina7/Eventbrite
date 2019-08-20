@@ -17540,3 +17540,45 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 43ms (Views: 28.9ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/users/1" for 127.0.0.1 at 2019-08-20 17:25:15 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/dev/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 18.0ms | ActiveRecord: 5.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-08-20 17:25:22 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PSeDAqdKqamCQMULk0TrsYnGNBNFQtbDKJ6hiCXNlv0s8gLnScWnLsbN+3DjsTMkkWLSlBdQyKmu/hPQfHeXCA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/dev/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/dev/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/dev/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-08-20 17:25:22 +0300
+Processing by EventController#index as HTML
+  Rendering event/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/event/index.html.erb:7
+  Rendered event/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-08-20 17:25:25 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
