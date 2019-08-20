@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # get 'event/show'
   # get 'event/index'
   # get 'event/new'
-  get 'event/create'
+  # get 'event/create'
   devise_for :users
 	root "event#index"
  #  get 'events_controller/index'
