@@ -40,11 +40,4 @@ class EventController < ApplicationController
   end
 end
 
- # @event = Event.new(start_date: start_date,
- #        duration: duration,
- #        title: title,
- #        description: description,
- #        price: price,
- #        password: password,
- #        location: location,)
- #      event.admin = User.all.sample
+  

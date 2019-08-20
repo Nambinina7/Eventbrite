@@ -18,6 +18,6 @@ class UsersController < ApplicationController
   private
 
   def authenticate_user(id)
-    current_user == User.find(id)
+    current_user = User.find(id)
 	end
 end
