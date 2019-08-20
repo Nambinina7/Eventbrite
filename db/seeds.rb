@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'faker'
+# require 'faker'
 
 # first_names = ['Nambinina', 'Iantsa', 'Bertrand', 'Emerih', 'Daniella', 'Thiago', 'Rajo', 'Tiavina', 'Koloina', 'Léo']
 
@@ -20,14 +20,14 @@ require 'faker'
 #   User.create(first_name: first_name, last_name: last_name, description: description, email: email)
 # end
 
-2.times do |i|
-  event = Event.new
-  event.start_date = DateTime.now + rand(1..100)
-  event.duration = rand(1..50)*5
-  event.title = Faker::Hipster.sentence(word_count: 4)
-  event.description = Faker::Hipster.paragraph(sentence_count: 2)
-  event.price = rand(1..1000)
-  event.location = Faker::Address.city
-  event.admin = User.all.sample
-  event.save
-end
+# 2.times do |i|
+#   event = Event.new
+#   event.start_date = DateTime.now + rand(1..100)
+#   event.duration = rand(1..50)*5
+#   event.title = Faker::Hipster.sentence(word_count: 4)
+#   event.description = Faker::Hipster.paragraph(sentence_count: 2)
+#   event.price = rand(1..1000)
+#   event.location = Faker::Address.city
+#   event.admin = User.all.sample
+#   event.save
+# end
