@@ -15,6 +15,10 @@ class UsersController < ApplicationController
 
   def update
   end
+
+  def destroy
+    
+  end
   private
 
   def authenticate_user(id)
