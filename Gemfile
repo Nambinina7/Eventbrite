@@ -65,4 +65,6 @@ gem 'faker'
 gem 'table_print'
 gem 'dotenv-rails'
 gem 'devise'
+gem "better_errors"
+gem "binding_of_caller"
 
