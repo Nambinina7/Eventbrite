@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # get 'event/new'
   # get 'event/create'
   devise_for :users
-  resources :users, only: [:show]
+  resources :user
 	root "event#index"
  #  get 'events_controller/index'
  #  resources :events_controller
