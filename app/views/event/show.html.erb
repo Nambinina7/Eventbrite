@@ -4,12 +4,15 @@
       <h1><%= @event.title %></h1>
     </div>
   </div>
+  <div class="card text-center ">
+      <%= link_to "rejoindre l'événement", new_event_participation_path(@event), class: 'nav-link'%>
+  </div>
   <div class="card mb-4">
     <div class="row">
       <div class="col">
         <div class="card-body">
           <p><strong>Description : </strong><%= @event.description %></p>
-          <p><strong>Nombre de Participants : </strong><%= @event.attendances.count %></p>
+          <p><strong>Nombre de Participants : </strong><%= @event.participants.count %></p>
           <p><strong>Date de début : </strong><%= @event.start_date %></p>
           <p><strong>Date de fin : </strong><%= @event.end_date %></p>
           <p><strong>Prix : </strong><%= @event.price %> €</p>
