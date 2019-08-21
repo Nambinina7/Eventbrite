@@ -5,7 +5,9 @@
     </div>
   </div>
   <div class="card text-center ">
+      <% if user_signed_in? %>
       <%= link_to "rejoindre l'événement", new_event_participation_path(@event), class: 'nav-link'%>
+       <% end %>
   </div>
   <div class="card mb-4">
     <div class="row">
