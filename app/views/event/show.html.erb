@@ -4,11 +4,6 @@
       <h1><%= @event.title %></h1>
     </div>
   </div>
-  <div class="card text-center ">
-      <% if user_signed_in? %>
-      <%= link_to "rejoindre l'événement", new_event_participation_path(@event), class: 'nav-link'%>
-       <% end %>
-  </div>
   <div class="card mb-4">
     <div class="row">
       <div class="col">
@@ -22,4 +17,24 @@
         </div>
       </div>
     </div>
+</div>
+<div class="card text-center ">
+<% if user_signed_in? %>
+  <% if @event.admin == current_user %>
+    <%= link_to "mon espace événement",   event_participations_path(@event), class: 'nav-link'%>
+  <% end %>
+<% end %>
+</div>
+<div class="card text-center ">
+  <% if user_signed_in? %>
+    <%= link_to "rejoindre l'événement", new_event_participation_path(@event), class: 'nav-link'%>
+  <% end %>
+  </div>
+
+<div class="card text-center ">
+    <%= link_to "édition de l'événement",    edit_event_path(@event), class: 'nav-link'%>
+</div>
+
+<div class="text-center">
+   <a  href="/event/<%= @event.id %>" data-method= "delete">Delete_event</a>
 </div>

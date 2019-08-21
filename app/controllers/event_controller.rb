@@ -38,6 +38,41 @@ class EventController < ApplicationController
       render :new
     end
   end
+  def edit
+    @event = Event.find(params[:id])
+  end
+  def update
+    @event = Event.find(params[:id])
+
+    start_date = params["start_date"]
+    duration = params["duration"]
+    title = params["title"]
+    description = params["description"]
+    price = params["price"]
+    location = params["location"]
+
+    @event.update(
+      start_date: start_date,
+      duration: duration,
+      title: title,
+      description: description,
+      price: price,
+      location: location,
+      admin: current_user
+    )
+    if  @event.save
+        redirect_to event_path
+      else
+        render "edit"
+      end
+
+  end
+  def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    redirect_to event_index_path 
+  end
+
 end
 
   

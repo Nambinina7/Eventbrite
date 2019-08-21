@@ -1,2 +1,19 @@
-<h1>Participations#index</h1>
-<p>Find me in app/views/participations/index.html.erb</p>
+<div class="header-image text-center">
+      <h1 class= 'header-title'>liste des invités</h1>
+    </div>
+    <div class="container">
+      <% if current_user == @event.admin %>
+        <% @event.participants.each do |participant| %>
+                <ul type="circle">
+                  <li><p><%= participant.email %></p></li>
+                </ul>
+        <% end %>
+      <% end %>
+
+    </div>
+
+
+
+
+
+  

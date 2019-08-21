@@ -1,0 +1,30 @@
+<h1>Editer l'Evenement</h1>
+
+<%= form_tag url_for(action: 'update'), method: "put" do %>
+	<%= label_tag 'start_date'%>
+  <%= text_field_tag 'start_date',nil, class: 'form-control', placeholder: 'Enter start_date' %>
+      <br /> <br />
+
+  <%= label_tag 'duration' %>
+  <%= text_area_tag 'duration' ,nil, class: 'form-control', placeholder: 'Enter duration'%>
+   <br /> <br />
+
+  <%= label_tag 'title' %>
+  <%= text_area_tag 'title',nil, class: 'form-control', placeholder: 'Enter title' %>
+      <br /> <br />
+
+      <%= label_tag 'description' %>
+      <%= text_area_tag 'description',nil, class: 'form-control', placeholder: 'Enter description' %>
+      <br /> <br />
+
+      <%= label_tag 'price' %>
+      <%= text_area_tag 'price',nil, class: 'form-control', placeholder: 'Enter price' %>
+      <br /> <br />
+
+      <%= label_tag 'location' %>
+      <%= text_area_tag 'location',nil, class: 'form-control', placeholder: ' Entrer location' %>
+      <br /> <br />
+
+      <%= submit_tag "update", class: "btn btn-primary"%>
+<% end %>
+</div>
